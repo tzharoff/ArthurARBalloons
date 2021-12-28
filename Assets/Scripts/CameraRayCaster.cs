@@ -18,7 +18,6 @@ public class CameraRayCaster : MonoBehaviour
         if(Input.touchCount > 0)
         {
             TouchPhase mainTouch = Input.GetTouch(0).phase;
-            Debug.Log($"{mainTouch}");
             if(mainTouch == TouchPhase.Ended || mainTouch == TouchPhase.Canceled)
             {
                 if(Physics.Raycast(camera.ScreenPointToRay(Input.GetTouch(0).position), out RaycastHit hit)){
